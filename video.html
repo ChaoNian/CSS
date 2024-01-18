@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 属性如下：
+
+src:
+同 <img> 标签使用方式相同，src 属性指向你想要嵌入网页当中的视频资源，他们的使用方式完全相同。
+
+controls:
+用户必须能够控制视频和音频的回放功能。你可以使用 controls 来包含浏览器提供的控件界面，同时你也可以使用合适的 JavaScript API 创建自己的界面。界面中至少要包含开始、停止以及调整音量的功能。
+
+<video> 标签内的内容
+这个叫做后备内容 — 当浏览器不支持 <video> 标签的时候，就会显示这段内容，这使得我们能够对旧的浏览器提供回退内容。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。 -->
+    <video src="./assect/video-240118.MOV" controls width="400"
+    height="400"
+    autoplay
+    loop
+    muted>
+        <p>
+            你的浏览器不支持 HTML5 视频。可点击<a href="rabbit320.mp4">此链接</a>观看
+          </p>
+    </video>
+    
+</body>
+</html>
+

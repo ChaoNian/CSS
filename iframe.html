@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <iframe> 元素旨在允许你将其他 Web 文档嵌入到当前文档中。 -->
+    <iframe src="//player.bilibili.com/player.html?aid=723739713&bvid=BV1dS4y1y7vd&cid=839825442&p=43" scrolling="no"
+        border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+    <div>
+        <iframe width="500" height="400" frameborder="0"
+            src="https://cn.bing.com/maps/embed?h=400&w=500&cp=mrs35ctgq82z&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+            scrolling="no">
+        </iframe>
+        <div style="white-space: nowrap; text-align: center; width: 500px; padding: 6px 0;">
+            <a id="largeMapLink" target="_blank"
+                href="https://cn.bing.com/maps?cp=mrs35ctgq82z&amp;sty=r&amp;lvl=11&amp;FORM=MBEDLD">查看放大的地图</a> &nbsp;
+            | &nbsp;
+            <a id="dirMapLink" target="_blank"
+                href="https://cn.bing.com/maps/directions?cp=mrs35ctgq82z&amp;sty=r&amp;lvl=11&amp;rtp=~pos.mrs35c_tgq82z____&amp;FORM=MBEDLD">获取路线</a>
+        </div>
+    </div>
+
+    <iframe src="https://developer.mozilla.org/zh-CN/docs/Glossary" width="100%" height="500" frameborder="0"
+        allowfullscreen sandbox>
+        <p>
+            <a href="https://developer.mozilla.org/zh-CN/docs/Glossary">
+                Fallback link for browsers that don't support iframes
+            </a>
+        </p>
+    </iframe>
+    <!-- 
+        <iframe> 基本要素：
+            allowfullscreen
+        如果设置，<iframe>则可以通过全屏 API 设置为全屏模式（稍微超出本文的范围）。
+
+        frameborder
+        如果设置为 1，则会告诉浏览器在此框架和其他框架之间绘制边框，这是默认行为。0 删除边框。不推荐这样设置，因为在 CSS 中可以更好地实现相同的效果。border: none;
+
+        src
+        该属性与 <video> / 元素表示文档中的图像。<img>一样包含指向要嵌入文档的 URL 路径。
+
+        width 和 height
+        这些属性指定你想要的 iframe 的宽度和高度。
+
+        备选内容
+        与 <video> 等其他类似元素相同，你可以在 <iframe></iframe> 标签之间包含备选内容，如果浏览器不支持 <iframe>，将会显示备选内容，这种情况下，我们已经添加了一个到该页面的链接。现在你几乎不可能遇到任何不支持 <iframe> 的浏览器。
+
+        sandbox
+        该属性需要在已经支持其他 <iframe> 功能（例如 IE 10 及更高版本）但稍微更现代的浏览器上才能工作，该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
+
+        备注： 为了提高速度，在主内容完成加载后，使用 JavaScript 设置 iframe 的 src 属性是个好主意。这使你的页面可以更快地被使用，并减少你的官方页面加载时间（重要的 SEO 指标）。
+
+        安全隐患
+            只有在必要时嵌入
+            使用 HTTPS
+            始终使用 sandbox 属性 沙盒
+     -->
+</body>
+
+</html>
