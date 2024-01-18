@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- 
+            图片存储在和 HTML 页面同路径的 images 文件夹下（这也是 Google 推荐的做法，利于 SEO/索引）；
+            备注： 搜索引擎也读取图像的文件名并把它们计入 SEO。因此你应该给你的图片取一个描述性的文件名：dinosaur.jpg 比 img835.png 要好。
+            宽度和高度
+你可以用宽度和高度属性来指定你的图片的高度和宽度
+备注： 如果你需要改变图片的尺寸，你应该使用 CSS 而不是 HTML。
+            图像标题
+类似于超链接，你可以给图片增加 title 属性来提供需要更进一步的支持信息
+
+通过为图片搭配说明文字的方式来解说图片
+
+-->
+        <img src="https://4db.cc/image_web/1542.jpg
+        " alt="这是一张图片" srcset="" width="600" height="300">
+    </div>
+    <figure>
+        <img
+          src="https://4db.cc/image_web/1542.jpg"
+          alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+          width="400"
+          height="341" />
+        <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
+      </figure>
+      <!-- 注意 <figure> 里不一定要是一张图片，只要是一个这样的独立内容单元：
+
+        用简洁、易懂的方式表达意图。
+        可以置于页面线性流的某处。
+        为主要内容提供重要的补充说明。
+        <figure> 可以是几张图片、一段代码、音视频、方程、表格或别的 -->
+
+
+            <!-- CSS 背景图片：总而言之，如果图像对你的内容里有意义，则应使用 HTML 图像。如果图像纯粹是装饰，则应使用 CSS 背景图片。 -->
+</body>
+
+</html>
