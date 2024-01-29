@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="150" cy="100" r="90" fill="blue" />
+</svg>
+<!-- 
+    在网上，你会和两种类型的图片打交道 — 位图和矢量图：
+
+    位图使用像素网格来定义 — 一个位图文件精确得包含了每个像素的位置和它的色彩信息。流行的位图格式包括 Bitmap (.bmp), PNG (.png), JPEG (.jpg), and GIF (.gif.)
+    矢量图使用算法来定义 — 一个矢量图文件包含了图形和路径的定义，电脑可以根据这些定义计算出当它们在屏幕上渲染时应该呈现的样子。 SVG 格式可以让我们创造用于 Web 的精彩的矢量图形。
+
+    SVG 是用于描述矢量图像的XML语言。它基本上是像 HTML 一样的标记，只是你有许多不同的元素来定义要显示在图像中的形状，以及要应用于这些形状的效果。SVG 用于标记图形，而不是内容。非常简单，你有一些元素来创建简单图形，如<circle> 和<rect>。更高级的 SVG 功能包括 <feColorMatrix>（使用变换矩阵转换颜色）<animate> （矢量图形的动画部分）和 <mask>（在图像顶部应用模板）
+    ，矢量图形相较于同样的位图，通常拥有更小的体积，因为它们仅需储存少量的算法，而不是逐个储存每个像素的信息。
+    
+    优点
+    矢量图像中的文本仍然可访问（这也有利于 SEO）。
+    SVG 可以很好地适应样式/脚本，因为图像的每个组件都是可以通过 CSS 或通过 JavaScript 编写的样式的元素。 
+
+    缺点：
+    SVG 非常容易变得复杂，这意味着文件大小会增加; 复杂的 SVG 也会在浏览器中占用很长的处理时间。
+    SVG 可能比栅格图像更难创建，具体取决于你尝试创建哪种图像。
+    旧版浏览器不支持 SVG，因此如果你需要在网站上支持旧版本的 IE，则可能不适合（SVG 从 IE9 开始得到支持）。
+
+    将 SVG 添加到页面
+       
+      要通过 <img>元素嵌入 SVG，你只需要按照预期的方式在 src 属性中引用它。
+       优点
+        快速，熟悉的图像语法与alt属性中提供的内置文本等效。
+        可以通过在<a>元素嵌套<img>，使图像轻松地成为超链接。
+      缺点
+        无法使用 JavaScript 操作图像。
+        如果要使用 CSS 控制 SVG 内容，则必须在 SVG 代码中包含内联 CSS 样式。 （从 SVG 文件调用的外部样式表不起作用）
+        不能用 CSS 伪类来重设图像样式（如:focus）。
+
+       -->
+</body>
+</html>
