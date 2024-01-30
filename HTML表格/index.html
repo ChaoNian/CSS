@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <link href="minimal-table.css" rel="stylesheet" type="text/css"> -->
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        @media (min-width: 30em) {
+            body {
+                background-color:  pink;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <table >
+    <table>
         <tfoot>
             <tr>
                 <td colspan="4">SUM</td>
                 <td>118</td>
             </tr>
         </tfoot>
-        
+
         <colgroup>
             <!-- <col /> 表示第一列-->
 
             <!--  span="2" 表示两列起作用 -->
-            <col style="background-color: yellow;" span="2"/> 
+            <col style="background-color: yellow;" span="2" />
         </colgroup>
-       <tr>
-        <th>Animals</th>
-       </tr>
-       <tr>
-        <th>Hippopotamus</th>
-       </tr>
-      
-      <tr>
-        <th>Horse</th>
-        <td>时尚</td>
-      </tr>
-      <tr>
-        <td>时尚</td>
-      </tr>
+        <tr>
+            <th>Animals</th>
+        </tr>
+        <tr>
+            <th>Hippopotamus</th>
+        </tr>
+
+        <tr>
+            <th>Horse</th>
+            <td>时尚</td>
+        </tr>
+        <tr>
+            <td>时尚</td>
+        </tr>
     </table>
 </body>
+
 </html>
