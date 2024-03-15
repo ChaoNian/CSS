@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 1000px;
+        }
+        .inner {
+            font-family: monospace;
+            position: relative;
+            width: 500px;
+            height: 150px;
+            top: 25px;
+            left: 100px;
+            background-color: darkblue;
+            color: white;
+            cursor: crosshair;
+            user-select: none;
+        }
+        .log{
+            position: relative;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <p class="log">鼠标在这里</p>
+        </div>
+    </div>
+    <script>
+        const log = document.querySelector('.log')
+        const inner = document.querySelector('.inner')
+
+        function setCoords(e) {
+            /*
+            偏移:被检查元素或发生事件的元素的左上角
+            “视口”（或“客户端”）坐标系以发生事件的视口或浏览上下文的左上角为原点
+            “页面”坐标系给出了一个像素相对于整个渲染文档左上角的位置
+            “屏幕”模型，原点是用户屏幕空间的左上角,该坐标系中的每个点都代表一个逻辑像素，因此每个坐标轴上的值都以整数递增或递减
+            */
+            log.innerText = `
+        偏移X/Y：${e.offsetX},${e.offsetY} 
+        视口X/Y：${e.clientX},${e.clientY}
+        页面X/Y：${e.pageX},${e.pageY}
+        屏幕X/Y：${e.screenX},${e.screenY}
+        `
+        }
+        inner.addEventListener('mousemove',setCoords)
+        inner.addEventListener('mouseenter', setCoords)
+        inner.addEventListener('mouseleave', setCoords)
+    </script>
+</body>
+</html>

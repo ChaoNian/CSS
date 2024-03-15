@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+        }
+
+        .wrapper>div {
+            border: 2px solid #ffa94d;
+            border-radius: 5px;
+            background-color: #ffd8a8;
+            padding: 1em;
+            color: #d9480f;
+        }
+
+        .wrapper {
+            display: grid;
+
+            /* 3列轨道  列宽自动计算*/
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 3行轨道  行高100px*/
+            grid-template-rows: repeat(3, 100px);
+            row-gap: 1em;
+            column-gap:1em;
+        }
+
+        /* 使用线编号定位元素 我们可以使用基于线的定位控制元素在网格上的位置*/
+        .box1 {
+            /* 比如我想要第一个元素从网格的最左开始，占 1 个列导轨。它还应该从第 1 行线开始，
+            延伸至第 4 行线： */
+
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+
+            /* grid-column-start: -1;
+            grid-column-end: -2;
+            grid-row-start: -1;
+            grid-row-end: -4; */
+
+              /* 默认跨度的写法 */
+            /*  
+                grid-column-start: 1;
+                grid-row-start: 1;
+                grid-row-end: 4; 
+            */
+
+            /* 简写 */
+            /* grid-column: 1 / 2;  实际上如果一个元素只延伸一个轨道的话，
+            你可以省略 grid-column-end 或 grid-row-end 值。元素默认延伸一个轨道。*/
+            /* grid-column: 1;
+            grid-row: 1 / 4; */
+
+            /* 当你为某些元素定位，剩下的元素会继续按照自动定位规则定位。
+            我们会在以后的文章中介绍这些规则，但现在你可以看到网格开始把未定位的元素放入空的单元格。 */
+
+            /* 网格布局的一个优势是：无需给元素周围加上 margin 来阻止文档流自动填补空白，就能实现设计中的留白区域 */
+
+            /* 更进一步的简写  grid-area 属性 
+            grid-area: grid-row-start(行起始（inline-start）) / grid-column-start(块起始（block-start）) / grid-row-end(行结束（inline-end）) / grid-column-end(块结束（block-end）);
+            */
+            /* grid-area: 1 / 1 / 4 / 2;  相等如下 */
+            /* grid-area: 1 / 1 / 4; */
+        }
+
+        .box2 {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* grid-column-start: -3;
+            grid-column-end: -4;
+            grid-row-start: -1;
+            grid-row-end: -3; */
+
+
+            /* 默认跨度的写法 */
+            /* grid-column-start: 3;
+                grid-row-start: 1;
+                grid-row-end: 3; */
+
+            /* 简写 */
+            /* grid-column: 3 / 4;
+            grid-row: 1/3; */
+
+            /* 更进一步的简写  grid-area 属性 */
+            /* grid-area: 1/3/3/4; */
+            /* grid-area: 1/3/3; */
+        }
+
+        .box3 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+            /* grid-column-start: -2;
+            grid-column-end: -3;
+            grid-row-start: -1;
+            grid-row-end: -2; */
+
+            /* 默认跨度的写法 元素默认延伸一个轨道*/
+            /* grid-column-start: 2;
+            grid-row-start: 1; */
+
+            /* 简写 */
+            /* grid-column: 2 / 3;
+            grid-row: 1/2; */
+
+            /* grid-area: 1/2/2/3; */
+        }
+
+        .box4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+
+            /* 默认跨度的写法 元素默认延伸一个轨道*/
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3; */
+
+
+            /* 简写 */
+            /* grid-column: 1 / -1; */
+            /* grid-row: 3/4; */
+
+            /* grid-area: 3/2/3/4; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+    </div>
+</body>
+
+</html>

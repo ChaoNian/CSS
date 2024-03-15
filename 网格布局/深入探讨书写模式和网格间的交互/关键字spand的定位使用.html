@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../box.css">
+    <style>
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+            /* column-gap: 20px;
+            row-gap: 1em; */
+
+            /*   gap: 1em 20px; */
+        }
+
+        /* 
+            关键字  span
+            除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法
+            */
+        .box1 {
+            /* grid-column-start: 1;
+            grid-row-start: 1;
+            grid-row-end: span 3; */
+
+            /* box1 元素就是从第 1 行开始， 跨3行，即结束线 的线编号 是4 */
+            /* grid-row: 1 / span 3; */
+
+            grid-row-start: span 3;
+            grid-row-end: span 2;
+        }
+
+        .box2 {
+            grid-column: 3;
+            grid-row: 1 / span 2;
+        }
+
+        .box3 {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .box4 {
+            grid-column: 2 / span 2;
+            grid-row: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box1">One</div>
+        <div class="box2">Two</div>
+        <div class="box3">Three</div>
+        <div class="box4">Four</div>
+    </div>
+
+</body>
+
+</html>

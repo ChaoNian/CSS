@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 200px 200px 200px; 固定轨道大小 */
+            /* grid-template-columns: 1fr 1fr 1fr; 弹性的轨道 */
+            /* grid-template-columns: 2fr 1fr 1fr;定义了一个 2fr 轨道和两个 1fr 轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。 */
+            /* 混合弹性尺寸和 绝对尺寸 */
+            /* grid-template-columns: 500px 1fr 2fr;将绝对大小的轨道与 fr 单位混合使用。第一条轨道是 500 像素，因此从可用空间中扣除了固定宽度。剩下的空间被一分为三，并按比例分配给两个灵活的轨道 */
+
+            /* grid-template-columns: 1fr 1fr 1fr; 可以如下写法 */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* Repeat 标记可以用于重复轨道列表中的一部分。在下面的示例中我创建了一个网格，其起始轨道为 20 像素，接着重复了 6 个 1fr 的轨道，最后再添加了一个 20 像素的轨道。 */
+            /* grid-template-columns: 20px repeat(6, 1fr) 20px;  共8个列轨道*/
+
+            /* grid-template-columns: repeat(5, 1fr 2fr);轨道： 1fr 2fr  被重复 创建5次， 创建了10个列轨道*/
+
+            grid-auto-rows: 100px;
+
+
+            /* 单元格间距 */
+            /* column-gap: 10px;
+            row-gap: 1em; */
+            gap: 10px 1em;
+            
+        }
+
+
+        .box1 {
+            /* 基于网格线，来计算元素是否跨行或跨列 */
+            /* grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+
+            /* 简写 */
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+
+        }
+
+        .box2 {
+            /* grid-column-start: 1;
+            grid-row-start: 3;
+            grid-row-end: 5; */
+            grid-column: 1;
+            grid-row: 3 / 5;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+        }
+
+        .wrapper>div {
+            border: 2px solid #ffa94d;
+            border-radius: 5px;
+            background-color: #ffd8a8;
+            padding: 1em;
+            color: #d9480f;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 基本概念：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout -->
+
+    <div class="wrapper">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+        <div class="box5">5</div>
+    </div>
+</body>
+
+</html>

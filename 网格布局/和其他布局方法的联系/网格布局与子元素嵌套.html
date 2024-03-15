@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            border: 2px solid #f76707;
+            border-radius: 5px;
+            background-color: #fff4e6;
+        }
+
+        .wrapper>div {
+            border: 2px solid #ffa94d;
+            border-radius: 5px;
+            background-color: #ffd8a8;
+            padding: 1em;
+            color: #d9480f;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .box1 {
+            /* 使用线编号来排列元素, 要注意的是网格是根据书写方向来编号的*/
+            grid-column-start: 1;
+            grid-column-end: 4;
+
+            /* 这可以让元素嵌套到网格中，就好像它们是网格的一部分一样，并且可以用它解决 subgrid 值尚未实现时要解决的一些问题。也可以在弹性盒布局中用类似的方法通过 display: contents 使嵌套的元素成为弹性元素。 */
+            display: contents;
+        }
+
+        .nested {
+            border: 2px solid #ffec99;
+            border-radius: 5px;
+            background-color: #fff9db;
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 如果将元素设置为 display: contents，通常自身的盒子会消失，子元素的盒子仍显示，就像子元素在文档树中上升了一层。 -->
+    <div class="wrapper">
+        <div class="box box1">
+            <div class="nested">a</div>
+            <div class="nested">b</div>
+            <div class="nested">c</div>
+        </div>
+        <div class="box box2">Two</div>
+        <div class="box box3">Three</div>
+        <div class="box box4">Four</div>
+        <div class="box box5">Five</div>
+    </div>
+</body>
+
+</html>

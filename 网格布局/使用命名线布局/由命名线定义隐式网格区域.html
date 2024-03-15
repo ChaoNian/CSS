@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../box.css">
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+            grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+        }
+
+        .thing {
+            grid-area: content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="thing">I am placed in an area named content.</div>
+    </div>
+</body>
+
+</html>
